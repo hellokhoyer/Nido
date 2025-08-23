@@ -1,0 +1,444 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "avatarUrl": "https://i.pravatar.cc/150?img=1",
+      "bio": "Hello, I am User One, your friendly host. I have been hosting for over 5 years and I absolutely love it. Meeting new people and making their stay comfortable and memorable is my passion.\n    \n    I am a local here and have extensive knowledge about the city and its hidden gems. I can guide you to the best restaurants, parks, and attractions. I am always available to answer any questions or provide assistance, ensuring you have a smooth and enjoyable stay.\n    \n    My home is a cozy and welcoming place, meticulously maintained and equipped with all the amenities for your convenience. I believe in creating a homely atmosphere for my guests where they can relax and feel at home.\n    \n    I am looking forward to hosting you and providing you the best experience. Welcome to our city and enjoy your stay!",
+      "email": "hello@abulkhoyer.com",
+      "firstName": "Abul",
+      "lastName": "Khoyer",
+      "initials": "AK",
+      "password": "hellokhoyer",
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    }
+  ],
+  "listings": [
+    {
+      "id": 1,
+      "name": "Cozy Apartment in London",
+      "description": "This beautiful and spacious apartment is located in the heart of London, just a stone's throw away from all the major attractions and landmarks. With its modern and stylish decor, this apartment is the perfect choice for anyone looking for a comfortable and convenient stay in the city.\n\nThe apartment features a large living room with plenty of natural light, a fully equipped kitchen with all the necessary appliances, and a cozy bedroom with a comfortable bed and high-quality linens. The bathroom is modern and clean, with a large shower and plenty of towels provided.\n\nWith its central location, modern amenities, and comfortable furnishings, this apartment is sure to make your stay in London a memorable one. Book now and experience the best that the city has to offer!",
+      "locationId": 1,
+      "images": [
+        "listing1-1.jpg",
+        "listing1-2.jpg",
+        "listing1-3.jpg",
+        "listing1-4.jpg",
+        "listing1-5.jpg",
+        "listing1-6.jpg",
+        "listing1-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-08-26T18:00:00.000Z"
+      },
+      "maxGuests": 4,
+      "price": 100,
+      "rating": 4.5,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 2,
+      "name": "Charming Studio in Paris",
+      "description": "This charming studio is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The studio is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The studio is equipped with a TV, a DVD player, and a washing machine.\n\n    Another thing to note is that the studio is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.",
+      "locationId": 2,
+      "images": [
+        "listing2-1.jpg",
+        "listing2-2.jpg",
+        "listing2-3.jpg",
+        "listing2-4.jpg",
+        "listing2-5.jpg",
+        "listing2-6.jpg",
+        "listing2-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-02T18:00:00.000Z"
+      },
+      "maxGuests": 2,
+      "price": 120,
+      "rating": 4.8,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 3,
+      "name": "Spacious House in London",
+      "description": "This spacious house is located in the heart of London, just a few minutes' walk from the nearest metro station. It has a large living room with a fireplace, a fully equipped kitchen, and a dining area. The house has three bedrooms and two bathrooms.\n\n    The house is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    One of the bedrooms has a double bed, while the other two have twin beds. The house is equipped with a TV, a DVD player, and a washing machine.\n\n    If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!",
+      "locationId": 1,
+      "images": [
+        "listing3-1.jpg",
+        "listing3-2.jpg",
+        "listing3-3.jpg",
+        "listing3-4.jpg",
+        "listing3-5.jpg",
+        "listing3-6.jpg",
+        "listing3-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-09T18:00:00.000Z"
+      },
+      "maxGuests": 6,
+      "price": 150,
+      "rating": 4.2,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 4,
+      "name": "Stylish Loft in Paris",
+      "description": "This stylish loft is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The loft is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The loft is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The loft is equipped with a TV, a DVD player, and a washing machine.",
+      "locationId": 2,
+      "images": [
+        "listing4-1.jpg",
+        "listing4-2.jpg",
+        "listing4-3.jpg",
+        "listing4-4.jpg",
+        "listing4-5.jpg",
+        "listing4-6.jpg",
+        "listing4-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-16T18:00:00.000Z"
+      },
+      "maxGuests": 8,
+      "price": 80,
+      "rating": 4.1,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 5,
+      "name": "Modern Apartment in London",
+      "description": "This modern apartment is located in the heart of London, just a few minutes' walk from the nearest metro station. It has a large living room with a fireplace, a fully equipped kitchen, and a dining area. The apartment has two bedrooms and two bathrooms.\n\n    The apartment is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!",
+      "locationId": 1,
+      "images": [
+        "listing5-1.jpg",
+        "listing5-2.jpg",
+        "listing5-3.jpg",
+        "listing5-4.jpg",
+        "listing5-5.jpg",
+        "listing5-6.jpg",
+        "listing5-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-08-26T18:00:00.000Z"
+      },
+      "maxGuests": 4,
+      "price": 90,
+      "rating": 3.8,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 6,
+      "name": "Cozy Cottage in Paris",
+      "description": "This cozy cottage is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    One of the many advantages of this cottage is that it is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    The cottage is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The cottage is equipped with a TV, a DVD player, and a washing machine.",
+      "locationId": 2,
+      "images": [
+        "listing6-1.jpg",
+        "listing6-2.jpg",
+        "listing6-3.jpg",
+        "listing6-4.jpg",
+        "listing6-5.jpg",
+        "listing6-6.jpg",
+        "listing6-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-02T18:00:00.000Z"
+      },
+      "maxGuests": 16,
+      "price": 110,
+      "rating": 4.3,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 7,
+      "name": "Luxury Villa in London",
+      "description": "This beautiful and spacious villa is located in the heart of London, just a stone's throw away from all the major attractions and landmarks. With its modern and stylish decor, this villa is the perfect choice for anyone looking for a comfortable and convenient stay in the city.\n\nThe villa features a large living room with plenty of natural light, a fully equipped kitchen with all the necessary appliances, and a cozy bedroom with a comfortable bed and high-quality linens. The bathroom is modern and clean, with a large shower and plenty of towels provided.\n\nLocated just a few minutes' walk from the nearest metro station, this villa is perfectly situated for exploring all that London has to offer. Whether you're here for business or pleasure, this villa is the ideal base for your stay in the city.\n\nWith its central location, modern amenities, and comfortable furnishings, this villa is sure to make your stay in London a memorable one. Book now and experience the best that the city has to offer!",
+      "locationId": 1,
+      "images": [
+        "listing7-1.jpg",
+        "listing7-2.jpg",
+        "listing7-3.jpg",
+        "listing7-4.jpg",
+        "listing7-5.jpg",
+        "listing7-6.jpg",
+        "listing7-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-09T18:00:00.000Z"
+      },
+      "maxGuests": 20,
+      "price": 100,
+      "rating": 4.7,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 8,
+      "name": "Charming Houseboat in Paris",
+      "description": "This charming houseboat is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The houseboat is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The houseboat is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The houseboat is equipped with a TV, a DVD player, and a washing machine.",
+      "locationId": 2,
+      "images": [
+        "listing8-1.jpg",
+        "listing8-2.jpg",
+        "listing8-3.jpg",
+        "listing8-4.jpg",
+        "listing8-5.jpg",
+        "listing8-6.jpg",
+        "listing8-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-16T18:00:00.000Z"
+      },
+      "maxGuests": 10,
+      "price": 120,
+      "rating": 4.6,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.975Z",
+      "modifiedAt": "2025-08-20T14:29:21.975Z"
+    },
+    {
+      "id": 9,
+      "name": "Sunny Apartment in London",
+      "description": "This spacious apartment is located in the heart of London, just a few minutes' walk from the nearest metro station. It has a large living room with a fireplace, a fully equipped kitchen, and a dining area. The apartment has three bedrooms and two bathrooms.\n\n    The apartment is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    One of the bedrooms has a double bed, while the other two have twin beds. The apartment is equipped with a TV, a DVD player, and a washing machine.\n\n    If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!",
+      "locationId": 1,
+      "images": [
+        "listing9-1.jpg",
+        "listing9-2.jpg",
+        "listing9-3.jpg",
+        "listing9-4.jpg",
+        "listing9-5.jpg",
+        "listing9-6.jpg",
+        "listing9-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-08-26T18:00:00.000Z"
+      },
+      "maxGuests": 6,
+      "price": 150,
+      "rating": 4.4,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 10,
+      "name": "Cozy Studio in Paris",
+      "description": "This stylish studio is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The studio is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    The studio is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The studio is equipped with a TV, a DVD player, and a washing machine.",
+      "locationId": 2,
+      "images": [
+        "listing10-1.jpg",
+        "listing10-2.jpg",
+        "listing10-3.jpg",
+        "listing10-4.jpg",
+        "listing10-5.jpg",
+        "listing10-6.jpg",
+        "listing10-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-02T18:00:00.000Z"
+      },
+      "maxGuests": 2,
+      "price": 80,
+      "rating": 4,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 11,
+      "name": "Spacious House in London",
+      "description": "This modern house is located in the heart of London, just a few minutes' walk from the nearest metro station. It has a large living room with a fireplace, a fully equipped kitchen, and a dining area. The house has two bedrooms and two bathrooms.\n\n    The house is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!",
+      "locationId": 1,
+      "images": [
+        "listing11-1.jpg",
+        "listing11-2.jpg",
+        "listing11-3.jpg",
+        "listing11-4.jpg",
+        "listing11-5.jpg",
+        "listing11-6.jpg",
+        "listing11-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-09T18:00:00.000Z"
+      },
+      "maxGuests": 4,
+      "price": 90,
+      "rating": 4.9,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 12,
+      "name": "Stylish Loft in Paris",
+      "description": "This cozy loft is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.\n\n    One of the many advantages of this loft is that it is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.\n\n    The loft is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The loft is equipped with a TV, a DVD player, and a washing machine.",
+      "locationId": 2,
+      "images": [
+        "listing12-1.jpg",
+        "listing12-2.jpg",
+        "listing12-3.jpg",
+        "listing12-4.jpg",
+        "listing12-5.jpg",
+        "listing12-6.jpg",
+        "listing12-7.jpg"
+      ],
+      "availability": {
+        "from": "2025-08-19T18:00:00.000Z",
+        "to": "2025-09-16T18:00:00.000Z"
+      },
+      "maxGuests": 8,
+      "price": 110,
+      "rating": 4.5,
+      "userId": 1,
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "country": "United Kingdom",
+      "name": "London",
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 2,
+      "country": "France",
+      "name": "Paris",
+      "createdAt": "2025-08-20T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 5,
+      "comment": "Absolutely fantastic stay! The apartment was spotless, cozy, and had everything we needed. The location couldn't be better - right in the heart of London. Will definitely book again!",
+      "createdAt": "2025-08-15T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "listingId": 2,
+      "rating": 4,
+      "comment": "Charming studio in a great location. Perfect for exploring Paris. The only small issue was some street noise at night, but overall a wonderful experience.",
+      "createdAt": "2025-08-10T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "listingId": 3,
+      "rating": 5,
+      "comment": "This spacious house in London exceeded our expectations. It's beautifully decorated, well-equipped, and in a fantastic neighborhood. Highly recommend for families!",
+      "createdAt": "2025-08-05T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "listingId": 4,
+      "rating": 4,
+      "comment": "The stylish loft in Paris was a great base for our city adventure. Modern, clean, and with all necessary amenities. The host was very responsive and helpful.",
+      "createdAt": "2025-07-31T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 5,
+      "comment": "We loved our stay at this modern apartment in London. The views were amazing, and the location was perfect for sightseeing. Would definitely stay here again!",
+      "createdAt": "2025-07-26T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "listingId": 2,
+      "rating": 4,
+      "comment": "The cozy cottage in Paris was a delightful experience. It's small but perfectly formed, with a lovely garden. Great for a romantic getaway.",
+      "createdAt": "2025-07-21T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 5,
+      "comment": "This luxury villa in London is simply stunning. The amenities are top-notch, and the service was impeccable. It's pricey, but worth every penny for a special occasion.",
+      "createdAt": "2025-07-16T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 4,
+      "comment": "Staying on this charming houseboat in Paris was a unique experience. It's surprisingly spacious and well-equipped. The gentle rocking took some getting used to, but overall it was fantastic.",
+      "createdAt": "2025-07-11T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "listingId": 2,
+      "rating": 5,
+      "comment": "The sunny apartment in London was a joy to stay in. Bright, airy, and with a lovely balcony. The host's attention to detail made us feel very welcome.",
+      "createdAt": "2025-07-06T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 4,
+      "comment": "This cozy studio in Paris is perfect for solo travelers or couples. It's small but efficiently designed, and the location is unbeatable. Great value for money.",
+      "createdAt": "2025-07-01T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "listingId": 1,
+      "rating": 5,
+      "comment": "We had an amazing time at this spacious house in London. It's beautifully renovated, with a lovely garden. Perfect for our family reunion. Highly recommended!",
+      "createdAt": "2025-06-26T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "listingId": 2,
+      "rating": 4,
+      "comment": "The stylish loft in Paris offered a great experience. The industrial chic decor was very cool, and the location was convenient for exploring the city. Minor issue with Wi-Fi, but otherwise excellent.",
+      "createdAt": "2025-06-21T14:29:21.976Z",
+      "modifiedAt": "2025-08-20T14:29:21.976Z"
+    }
+  ]
+}

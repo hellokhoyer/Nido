@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 489.35 341.66">
+    <rect x="0" y="0" width="66.36" height="341.66" fill="none" stroke="rgb(4,164,186)" stroke-width="7"/>
+    
+    <rect fill="rgb(4,164,186)" x="0" y="0" width="66.36" height="341.66" opacity="1"/>
+    
+    <polygon fill="none" stroke="rgb(4,164,186)" stroke-width="7" stroke-dasharray="650" stroke-dashoffset="650" points="270.39,0 173.74,119.92 132.71,170.79 132.71,0"/>
+    
+    <polygon fill="rgb(4,164,186)" points="270.39,0 173.74,119.92 132.71,170.79 132.71,0" opacity="1"/>
+    
+    <polygon fill="none" stroke="rgb(4,164,186)" stroke-width="7" stroke-dasharray="650" stroke-dashoffset="650" points="270.39,341.66 132.71,341.66 132.71,170.87 173.74,221.71"/>
+    
+    <polygon fill="rgb(4,164,186)" points="270.39,341.66 132.71,341.66 132.71,170.87 173.74,221.71" opacity="1"/>
+    
+    <polygon fill="none" stroke="rgb(4,164,186)" stroke-width="7" stroke-dasharray="900" stroke-dashoffset="900" points="489.35,170.36 352.07,340.75 214.74,170.83 352.02,0.01 489.35,170.36"/>
+    
+    <polygon fill="rgb(4,164,186)" points="489.35,170.36 352.07,340.75 214.74,170.83 352.02,0.01 489.35,170.36" opacity="1"/>
+</svg>

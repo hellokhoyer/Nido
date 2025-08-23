@@ -1,0 +1,313 @@
+{
+  "info": {
+    "name": "Nido API",
+    "description": "Complete API collection for the Airbnb-style property rental platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3001/api",
+      "type": "string"
+    },
+    {
+      "key": "accessToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Sign In",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('accessToken', response.accessToken);",
+                  "    pm.test('Access token received', function () {",
+                  "        pm.expect(response.accessToken).to.not.be.undefined;",
+                  "    });",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"hello@abulkhoyer.com\",\n  \"password\": \"hellokhoyer\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/signin",
+              "host": ["{{baseUrl}}"],
+              "path": ["signin"]
+            },
+            "description": "Authenticate user and receive access token"
+          }
+        },
+        {
+          "name": "Get Current User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["me"]
+            },
+            "description": "Get current authenticated user information"
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/refreshToken",
+              "host": ["{{baseUrl}}"],
+              "path": ["refreshToken"]
+            },
+            "description": "Get new access token using refresh token"
+          }
+        },
+        {
+          "name": "Sign Out",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/signout",
+              "host": ["{{baseUrl}}"],
+              "path": ["signout"]
+            },
+            "description": "Sign out current user"
+          }
+        }
+      ],
+      "description": "User authentication endpoints"
+    },
+    {
+      "name": "Listings",
+      "item": [
+        {
+          "name": "Get All Listings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "london",
+                  "description": "Search by listing name",
+                  "disabled": true
+                },
+                {
+                  "key": "guests",
+                  "value": "4",
+                  "description": "Filter by max guests",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Get all property listings with optional filtering"
+          }
+        },
+        {
+          "name": "Get Single Listing",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings", "1"]
+            },
+            "description": "Get a specific listing by ID"
+          }
+        },
+        {
+          "name": "Create New Listing",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Beautiful Test Villa\",\n  \"description\": \"A stunning test villa with amazing views and modern amenities. Perfect for families or groups looking for a luxurious stay.\",\n  \"locationId\": 2,\n  \"images\": [\"test-villa-1.jpg\", \"test-villa-2.jpg\", \"test-villa-3.jpg\"],\n  \"price\": 275,\n  \"maxGuests\": 10,\n  \"availability\": {\n    \"from\": \"2024-03-01T00:00:00.000Z\",\n    \"to\": \"2024-03-31T23:59:59.000Z\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listings",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings"]
+            },
+            "description": "Create a new property listing"
+          }
+        },
+        {
+          "name": "Search Listings by Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings?search=apartment",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "apartment"
+                }
+              ]
+            },
+            "description": "Search listings containing 'apartment' in the name"
+          }
+        },
+        {
+          "name": "Filter by Guests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings?guests=6",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings"],
+              "query": [
+                {
+                  "key": "guests",
+                  "value": "6"
+                }
+              ]
+            },
+            "description": "Filter listings that can accommodate 6 or more guests"
+          }
+        }
+      ],
+      "description": "Property listings management endpoints"
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Get Reviews for Listing 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reviews?listingId=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["reviews"],
+              "query": [
+                {
+                  "key": "listingId",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get all reviews for listing with ID 1"
+          }
+        },
+        {
+          "name": "Get Reviews for Listing 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reviews?listingId=2",
+              "host": ["{{baseUrl}}"],
+              "path": ["reviews"],
+              "query": [
+                {
+                  "key": "listingId",
+                  "value": "2"
+                }
+              ]
+            },
+            "description": "Get all reviews for listing with ID 2"
+          }
+        }
+      ],
+      "description": "Reviews and ratings endpoints"
+    },
+    {
+      "name": "Error Testing",
+      "item": [
+        {
+          "name": "Test 401 - No Authorization",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings"]
+            },
+            "description": "Test endpoint without authorization header (should return 401)"
+          }
+        },
+        {
+          "name": "Test 404 - Invalid Listing ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/listings/999",
+              "host": ["{{baseUrl}}"],
+              "path": ["listings", "999"]
+            },
+            "description": "Test with non-existent listing ID (should return 404)"
+          }
+        },
+        {
+          "name": "Test 404 - Invalid Route",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/nonexistent",
+              "host": ["{{baseUrl}}"],
+              "path": ["nonexistent"]
+            },
+            "description": "Test non-existent route (should return 404)"
+          }
+        }
+      ],
+      "description": "Test error responses and edge cases"
+    }
+  ]
+}
