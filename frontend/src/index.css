@@ -7,9 +7,9 @@
   --color-card-foreground: hsl(20 14.3% 4.1%);
   --color-popover: hsl(0 0% 100%);
   --color-popover-foreground: hsl(20 14.3% 4.1%);
-  --color-primary: hsl(20 14.3% 4.1%);
-  --color-primary-darker: hsl(20 14.3% 4.1%);
-  --color-primary-foreground: hsl(60 9.1% 97.8%);
+  --color-primary: hsl(191 99% 36%);
+  --color-primary-darker: hsl(191 99% 30%);
+  --color-primary-foreground: hsl(0 0% 100%);
   --color-secondary: hsl(0 0% 85%);
   --color-secondary-foreground: hsl(24 9.8% 10%);
   --color-muted: hsl(0 0% 85%);
@@ -20,13 +20,13 @@
   --color-destructive-foreground: hsl(60 9.1% 97.8%);
   --color-border: hsl(20 5.9% 90%);
   --color-input: hsl(20 5.9% 90%);
-  --color-ring: hsl(20 14.3% 4.1%);
+  --color-ring: hsl(191 99% 36%);
   --color-star: hsl(39 89% 67%);
-  
+
   --radius-lg: 0.5rem;
   --radius-md: calc(0.5rem - 2px);
   --radius-sm: calc(0.5rem - 4px);
-  
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }
@@ -39,9 +39,9 @@
     --color-card-foreground: hsl(60 9.1% 97.8%);
     --color-popover: hsl(20 14.3% 4.1%);
     --color-popover-foreground: hsl(60 9.1% 97.8%);
-    --color-primary: hsl(53 81% 90%);
-    --color-primary-darker: hsl(31 32% 48%);
-    --color-primary-foreground: hsl(20 14.3% 4.1%);
+    --color-primary: hsl(191 99% 45%);
+    --color-primary-darker: hsl(191 99% 30%);
+    --color-primary-foreground: hsl(0 0% 100%);
     --color-secondary: hsl(0 0% 20%);
     --color-secondary-foreground: hsl(60 9.1% 97.8%);
     --color-muted: hsl(0 0% 15%);
@@ -52,7 +52,7 @@
     --color-destructive-foreground: hsl(60 9.1% 97.8%);
     --color-border: hsl(0 0% 20%);
     --color-input: hsl(0 0% 20%);
-    --color-ring: hsl(35.5 91.7% 32.9%);
+    --color-ring: hsl(191 99% 36%);
   }
 }
 
@@ -67,9 +67,9 @@
     --popover: 0, 0%, 100%;
     --popover-foreground: 20, 14.3%, 4.1%;
 
-    --primary: 20, 14.3%, 4.1%;
-    --primary-darker: 20, 14.3%, 4.1%;
-    --primary-foreground: 60, 9.1%, 97.8%;
+    --primary: 191, 99%, 36%;
+    --primary-darker: 191, 99%, 30%;
+    --primary-foreground: 0, 0%, 100%;
 
     --secondary: 0, 0%, 85%;
     --secondary-foreground: 24, 9.8%, 10%;
@@ -85,7 +85,7 @@
 
     --border: 20, 5.9%, 90%;
     --input: 20, 5.9%, 90%;
-    --ring: 20, 14.3%, 4.1%;
+    --ring: 191, 99%, 36%;
     --star: 39, 89%, 67%;
 
     --radius: 0.5rem;
@@ -101,9 +101,9 @@
     --popover: 20, 14.3%, 4.1%;
     --popover-foreground: 60, 9.1%, 97.8%;
 
-    --primary: 53, 81%, 90%;
-    --primary-darker: 31, 32%, 48%;
-    --primary-foreground: 20, 14.3%, 4.1%;
+    --primary: 191, 99%, 36%;
+    --primary-darker: 191, 99%, 30%;
+    --primary-foreground: 0, 0%, 100%;
 
     --secondary: 0, 0%, 20%;
     --secondary-foreground: 60, 9.1%, 97.8%;
@@ -119,19 +119,27 @@
 
     --border: 0, 0%, 20%;
     --input: 0, 0%, 20%;
-    --ring: 35.5, 91.7%, 32.9%;
+    --ring: 191, 99%, 36%;
     --star: 39, 89%, 67%;
   }
 }
 
 @keyframes accordion-down {
-  from { height: 0; }
-  to { height: var(--radix-accordion-content-height); }
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
 }
 
 @keyframes accordion-up {
-  from { height: var(--radix-accordion-content-height); }
-  to { height: 0; }
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }
 
 @layer base {
