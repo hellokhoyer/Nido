@@ -1,8 +1,6 @@
-import { forwardRef } from "react";
-
 import { cn } from "@/lib/utils/cn";
 
-const Card = forwardRef(({ className, ...props }, ref) => (
+const Card = ({ className, ref, ...props }) => (
   <div
     ref={ref}
     className={cn(
@@ -11,15 +9,15 @@ const Card = forwardRef(({ className, ...props }, ref) => (
     )}
     {...props}
   />
-));
+);
 Card.displayName = "Card";
 
-const CardHeader = forwardRef(({ className, ...props }, ref) => (
+const CardHeader = ({ className, ref, ...props }) => (
   <div ref={ref} className={cn("flex flex-col p-6", className)} {...props} />
-));
+);
 CardHeader.displayName = "CardHeader";
 
-const CardTitle = forwardRef(({ className, ...props }, ref) => (
+const CardTitle = ({ className, ref, ...props }) => (
   <h3
     ref={ref}
     className={cn(
@@ -28,30 +26,30 @@ const CardTitle = forwardRef(({ className, ...props }, ref) => (
     )}
     {...props}
   />
-));
+);
 CardTitle.displayName = "CardTitle";
 
-const CardDescription = forwardRef(({ className, ...props }, ref) => (
+const CardDescription = ({ className, ref, ...props }) => (
   <p
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
-));
+);
 CardDescription.displayName = "CardDescription";
 
-const CardContent = forwardRef(({ className, ...props }, ref) => (
+const CardContent = ({ className, ref, ...props }) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-));
+);
 CardContent.displayName = "CardContent";
 
-const CardFooter = forwardRef(({ className, ...props }, ref) => (
+const CardFooter = ({ className, ref, ...props }) => (
   <div
     ref={ref}
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />
-));
+);
 CardFooter.displayName = "CardFooter";
 
 export {
