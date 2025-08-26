@@ -38,11 +38,6 @@ app.use(cookieParser());
 
 // Auth middleware
 const authMiddleware = async (req, res, next) => {
-  // Skip auth if USE_AUTH is false
-  if (process.env.USE_AUTH === "false") {
-    return next();
-  }
-
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(" ")[1];
 
