@@ -1,10 +1,13 @@
+// server.js
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 
+// Load environment variables
 dotenv.config();
 
+// Import your helper functions
 import { initializeDatabase } from "./database.js";
 import {
   cleanUser,
@@ -35,6 +38,11 @@ app.use(cookieParser());
 
 // Auth middleware
 const authMiddleware = async (req, res, next) => {
+  // Skip auth if USE_AUTH is false
+  if (process.env.USE_AUTH === "false") {
+    return next();
+  }
+
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(" ")[1];
 
@@ -45,12 +53,12 @@ const authMiddleware = async (req, res, next) => {
   try {
     const payload = await verifyToken(token, { returnPayload: true });
     if (!payload) {
-      return res.status(403).json({ message: "Invalid token" });
+      return res.status(403).json({ message: "Unauthorized" });
     }
     req.user = payload;
     next();
   } catch (error) {
-    return res.status(403).json({ message: "Token verification failed" });
+    return res.status(403).json({ message: "Unauthorized" });
   }
 };
 
@@ -114,9 +122,14 @@ app.get("/api/reviews", authMiddleware, async (req, res) => {
 });
 
 // Get current user
-app.get("/api/me", authMiddleware, async (req, res) => {
+app.get("/api/me", async (req, res) => {
   try {
-    const accessToken = req.headers.authorization?.split(" ")[1];
+    const authHeader = req.headers.authorization;
+    const accessToken = authHeader && authHeader.split(" ")[1];
+
+    if (!accessToken) {
+      return res.status(401).json({ message: "Access token required" });
+    }
 
     const accessTokenPayload = await verifyToken(accessToken, {
       returnPayload: true,
@@ -126,19 +139,15 @@ app.get("/api/me", authMiddleware, async (req, res) => {
       return res.status(403).json({ message: "Unauthorized" });
     }
 
-    const refreshTokenPayload = await verifyToken(accessTokenPayload.data, {
-      returnPayload: true,
-    });
+    const user = getUserById(accessTokenPayload.userId);
 
-    if (!refreshTokenPayload) {
+    if (!user) {
       return res.status(403).json({ message: "Unauthorized" });
     }
 
-    const user = getUserById(refreshTokenPayload.data);
-
     res.json({
-      accessToken: process.env.USE_AUTH ? accessToken : null,
-      user: process.env.USE_AUTH ? cleanUser(user) : null,
+      accessToken: process.env.USE_AUTH === "true" ? accessToken : null,
+      user: process.env.USE_AUTH === "true" ? cleanUser(user) : null,
     });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
@@ -153,18 +162,19 @@ app.post("/api/signin", async (req, res) => {
     if (user) {
       const refreshToken = await generateRefreshToken(user.id);
 
+      // Set HTTP-only cookie for security
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict",
-        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
       });
 
-      const accessToken = await generateAccessToken(refreshToken);
+      const accessToken = await generateAccessToken(user.id);
 
       res.json({
-        accessToken: process.env.USE_AUTH ? accessToken : null,
-        user: process.env.USE_AUTH ? cleanUser(user) : null,
+        accessToken: process.env.USE_AUTH === "true" ? accessToken : null,
+        user: process.env.USE_AUTH === "true" ? cleanUser(user) : null,
       });
     } else {
       res.status(401).json({ message: "Invalid credentials" });
@@ -179,20 +189,30 @@ app.get("/api/refreshToken", async (req, res) => {
   try {
     const refreshToken = req.cookies.refreshToken;
 
-    const refreshTokenPayload = refreshToken
-      ? await verifyToken(refreshToken, { returnPayload: true })
-      : false;
-
-    if (process.env.USE_AUTH && !refreshTokenPayload) {
-      return res.status(403).json({ message: "Invalid refresh token" });
+    if (!refreshToken) {
+      return res.status(403).json({ message: "Unauthorized" });
     }
 
-    const user = getUserById(refreshTokenPayload.data);
-    const accessToken = await generateAccessToken(refreshToken);
+    const refreshTokenPayload = await verifyToken(refreshToken, {
+      returnPayload: true,
+    });
 
-    res.json(
-      process.env.USE_AUTH ? { accessToken, user: cleanUser(user) } : null
-    );
+    if (!refreshTokenPayload) {
+      return res.status(403).json({ message: "Unauthorized" });
+    }
+
+    const user = getUserById(refreshTokenPayload.userId);
+
+    if (!user) {
+      return res.status(403).json({ message: "Unauthorized" });
+    }
+
+    const accessToken = await generateAccessToken(user.id);
+
+    res.json({
+      accessToken: process.env.USE_AUTH === "true" ? accessToken : null,
+      user: process.env.USE_AUTH === "true" ? cleanUser(user) : null,
+    });
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
