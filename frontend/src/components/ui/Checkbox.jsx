@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils/cn';
 
-const Checkbox = React.forwardRef(({ className, ...props }, ref) => (
+const Checkbox = ({ className, ref, ...props }) => (
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
@@ -19,7 +19,7 @@ const Checkbox = React.forwardRef(({ className, ...props }, ref) => (
       <Check className='h-4 w-4' />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
-));
+);
 Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
 export { Checkbox };
