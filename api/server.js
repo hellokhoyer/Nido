@@ -223,6 +223,11 @@ app.post("/api/signout", authMiddleware, (req, res) => {
   }
 });
 
+// Basic health-check route used for local status checks
+app.get("/", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -234,8 +239,10 @@ app.use("*", (req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
 
 export default app;
